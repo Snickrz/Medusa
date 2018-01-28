@@ -29,9 +29,6 @@ bot.on('message', async function(message) {
         case "blague":
            message.reply('Tu sais ce qui est marrant, un catamaran.');
             break;
-            
-        default:
-            message.reply("Commande invalide, faites !help.");
     }
     
     switch (args[0].toLowerCase()) {
@@ -39,9 +36,6 @@ bot.on('message', async function(message) {
         case "enzo":
            message.reply('Me parles pas de lui stp.');
             break;
-            
-        default:
-            message.reply("Commande invalide, faites !help.");
     }
     
 });
