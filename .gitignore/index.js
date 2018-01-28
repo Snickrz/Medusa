@@ -26,8 +26,8 @@ bot.on('message', async function(message) {
     
     switch (args[0].toLowerCase()) {
             
-        case "bonjour":
-           message.reply('Bonjour, Fils.');
+        case "blague":
+           message.reply('Tu sais ce qui est marrant,/n un catamaran.');
             break;
             
             
