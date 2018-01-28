@@ -59,6 +59,10 @@ bot.on('message', async function(message) {
              message.channel.send("50-50");
 }          
             break;
+            
+        case "join":
+            voiceConnection.channel.join();
+            break;
     
     }
 });
