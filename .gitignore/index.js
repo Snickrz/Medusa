@@ -5,7 +5,7 @@ var bot = new Discord.Client();
 const PREFIX = "!";
 
 bot.on("ready", function() {
-    bot.user.setGame("TutoBot, !help");
+    bot.user.setGame("veiller sur ses enfants");
     console.log("Le bot a bien ete connecte");
 });
 
