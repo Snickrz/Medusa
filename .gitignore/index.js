@@ -44,12 +44,12 @@ bot.on('message', async function(message) {
             break;
             
         case "join":
-            message.channel.send('Joining...');
+            message.author.channel.send('Joining...');
             var voiceChannel = message.author.voiceChannel;
-            if (!voiceChannel) {
+            if (voiceChannel) {
+                voiceChannel.join()
+                    } else {     
                 return message.reply(`Vous n'êtes dans aucun canal vocal!`);
-                    } else {
-                        voiceChannel.join()
                 }
             break;
 
