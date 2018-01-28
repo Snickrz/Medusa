@@ -1,7 +1,5 @@
 const Discord = require("discord.js");
 
-var request = require ("request");
-var cat = "http://random.cat/meow"
 var bot = new Discord.Client();
 
 const PREFIX = "!";
@@ -28,16 +26,7 @@ bot.on('message', async function(message) {
     var args = message.content.substring(PREFIX.length).split (" ")
     
     switch (args[0].toLowerCase()) {
-            
-        case "cat":
-        request({
-            url: cat,
-            json: true
-        }, function (error, response, body) {
-            console.log(body);
-        })
-        break;
-            
+          
         case "blague":
            message.channel.send('Tu sais ce qui est marrant, un catamaran.');
             break;
@@ -74,6 +63,7 @@ bot.on('message', async function(message) {
 }          
             break;
     }
+    
 });
     
 
