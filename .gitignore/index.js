@@ -51,6 +51,7 @@ bot.on('message', async function(message) {
                     } else {
                         voiceChannel.join()
                 }
+            break;
 
         case "pool":
             
