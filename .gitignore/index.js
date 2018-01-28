@@ -33,6 +33,17 @@ bot.on('message', async function(message) {
         default:
             message.reply("Commande invalide, faites !help.");
     }
+    
+    switch (args[0].toLowerCase()) {
+            
+        case "enzo":
+           message.reply('Me parles pas de lui stp.');
+            break;
+            
+        default:
+            message.reply("Commande invalide, faites !help.");
+    }
+    
 });
     
 
