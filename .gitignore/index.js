@@ -22,7 +22,7 @@ bot.on('message', async function(message) {
     
     if(!message.content.startsWith(PREFIX)) return;
     
-    var args = message.content.substring(PREFIX.length).split (" ");
+    var args = message.content.substring(PREFIX.length).split (" ")
     
     switch (args[0].toLowerCase()) {
             
@@ -43,9 +43,24 @@ bot.on('message', async function(message) {
             break;
             
         case "ongagne":
-           message.reply('ouais');
-            break;
-    }
+    module.exports.run = async (bot, message, args ) => {
+	var yes = Math.floor(Math.random() * (100 - 0)) + 0;
+	var no = 100 - yes;
+	
+	module.exports.run = async (bot, message, args ) => {
+var yes = Math.floor(Math.random() * (100 - 0)) + 0;
+var no = 100 - yes;
+
+if (yes < no) {
+  message.channel.send("non (" + no + "%)" );
+}
+else if (yes > no) {
+  message.channel.send("oui (" + yes + "%)");
+}
+else{
+  message.channel.send("50-50");
+}
+}}
     
 });
     
