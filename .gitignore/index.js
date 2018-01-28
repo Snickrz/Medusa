@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 var bot = new Discord.Client();
 
-const PREFIX = "µ";
+const PREFIX = ":";
 
 bot.on("ready", function() {
     bot.user.setGame("veiller sur ses enfants");
@@ -44,7 +44,7 @@ bot.on('message', async function(message) {
             break;
             
         case "chaine":
-            message.author.channel.send('https://www.youtube.com/channel/UCanvsq5uut8-KDm0V026oFQ');
+            message.channel.send('https://www.youtube.com/channel/UCanvsq5uut8-KDm0V026oFQ');
             break;
             
         case "pool":
