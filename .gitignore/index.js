@@ -5,14 +5,14 @@ var bot = new Discord.Client();
 const PREFIX = "!";
 
 bot.on("ready", function() {
-    bot.user.setGame("veiller sur ses enfants.");
+    bot.user.setGame("veiller sur ses enfants");
     console.log("Le bot a bien ete connecte");
 });
 
 bot.on('message', function(message) {
     
     if(message.content === 'bonjour') {
-     message.channel.send('Bonjour, Fils.')  
+     message.reply('Bonjour, fils.')  
     }
     
 });
@@ -44,7 +44,7 @@ bot.on('message', async function(message) {
             
             
 
-        case "onvagagner":
+        case "pool":
             
             var yes = Math.floor(Math.random() * (100 - 0)) + 0;
             var no = 100 - yes;
