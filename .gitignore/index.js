@@ -47,7 +47,7 @@ bot.on('message', async function(message) {
             message.channel.send('https://www.youtube.com/channel/UCanvsq5uut8-KDm0V026oFQ');
             break;
             
-        case "pool":
+        case "poll":
             
             var yes = Math.floor(Math.random() * (100 - 0)) + 0;
             var no = 100 - yes;
@@ -60,6 +60,22 @@ bot.on('message', async function(message) {
 }
             else{
              message.channel.send("50-50");
+}          
+            break;
+            
+        case "cor":
+            
+            var yes = Math.floor(Math.random() * (100 - 0)) + 0;
+            var no = 100 - yes;
+            
+            if (yes < no) {
+             message.channel.send("Simple (" + no + "%)" );
+}
+            else if (yes > no) {
+             message.channel.send("Classé (" + yes + "%)");
+}
+            else{
+             message.channel.send("Chasse aux Terroristes");
 }          
             break;
     }
