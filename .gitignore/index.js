@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 
 var bot = new Discord.Client();
-var cat = "http://random.cat/meow"
 
 const PREFIX = "!";
 
@@ -47,17 +46,7 @@ bot.on('message', async function(message) {
         case "chaine":
             message.author.channel.send('https://www.youtube.com/channel/UCanvsq5uut8-KDm0V026oFQ');
             break;
-        
-        switch (args[0].toLowerCase()) {
-    case "cat":
-        request({
-            url: cat,
-            json: true
-        }, function (error, response, body) {
-            console.log(body);
-        })
             
-        
         case "pool":
             
             var yes = Math.floor(Math.random() * (100 - 0)) + 0;
