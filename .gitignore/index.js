@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 
+var request = require ("request");
 var bot = new Discord.Client();
+var cat = "http://random.cat/meow"
 
 const PREFIX = "!";
 
@@ -16,6 +18,25 @@ bot.on('message', function(message) {
      message.reply('Bonjour, fils.')     
     }
     
+});
+
+bot.on("message", function(message) {
+if (message.author.equals(bot.user))return;
+
+if (!message.content.startsWith(PREFIX)) return;
+
+var args = message.content.substring(PREFIX.length).split(" ");
+
+switch (args[0].toLowerCase()) {
+    case "cat":
+        request({
+            url: cat,
+            json: true
+        }, function (error, response, body) {
+            console.log(body);
+        })
+        break;
+    }
 });
 
 bot.on('message', async function(message) {
