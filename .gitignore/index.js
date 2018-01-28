@@ -9,6 +9,8 @@ bot.on("ready", function() {
     console.log("Le bot a bien ete connecte");
 });
 
+ot.login("WP0YTuZTMAEWjJy13HYFAs0-VLGRd3VD");
+
 bot.on('message', function(message) {
     
     if(message.content === 'ping') {
