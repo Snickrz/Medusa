@@ -42,11 +42,13 @@ bot.on('message', async function(message) {
            message.channel.send('Mon créateur...');
             break;
             
-            module.exports.run = async (bot, message, args ) => {
-            var yes = Math.floor(Math.random() * (100 - 0)) + 0;
-            var no = 100 - yes;
+            
 
             case "onvagagner":
+            
+            var yes = Math.floor(Math.random() * (100 - 0)) + 0;
+            var no = 100 - yes;
+            
             if (yes < no) {
              message.channel.send("non (" + no + "%)" );
 }
