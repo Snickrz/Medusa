@@ -62,13 +62,23 @@ bot.on('message', async function(message) {
             
         case "join":
             
-            const voiceChannel = message.member.voiceChannel;
-            if (!voiceChannel){
-            return message.channel.send(":x: You must be in a voice channel first!");
-             }
-            voiceChannel.join()
-            .then(message => message.channel.send("I joined the channel successfully!"));   
-               
+            
+            let voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel || voiceChannel.type !== 'voice')
+    {
+        return;
+    }
+    else if (message.guild.voiceConnection)
+    {
+        return;
+    }
+    else
+    {
+        voiceChannel.join();
+    }
+            
+            
+            
             break;
     
     }
