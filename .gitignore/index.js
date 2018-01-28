@@ -15,8 +15,8 @@ bot.on('message', function(message) {
         
      message.reply('Bonjour, fils.')
         
-     const channel = message.member.voiceChannel;
-     channel.join()
+     message.member.voiceChannel.channel.join()
+     
     }
     
 });
