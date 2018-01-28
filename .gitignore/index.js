@@ -45,7 +45,7 @@ bot.on('message', async function(message) {
             
         case "join":
             message.channel.send('Joining...');
-            var voiceChannel = message.member.voiceChannel;
+            var voiceChannel = message.author.voiceChannel;
             if (!voiceChannel) {
                 return message.reply(`Vous n'êtes dans aucun canal vocal!`);
                     } else {
