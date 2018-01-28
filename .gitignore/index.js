@@ -61,24 +61,12 @@ bot.on('message', async function(message) {
             break;
             
         case "join":
-            
-            
-            let voiceChannel = message.member.voiceChannel;
-    if (!voiceChannel || voiceChannel.type !== 'voice')
-    {
-        return;
-    }
-    else if (message.guild.voiceConnection)
-    {
-        return;
-    }
-    else
-    {
-        voiceChannel.join();
-    }
-            
-            
-            
+            const channel = message.member.voiceChannel;
+
+    channel.join()
+    .then(connection => console.log('Connected!'))
+    .catch(console.error);         
+                   
             break;
     
     }
