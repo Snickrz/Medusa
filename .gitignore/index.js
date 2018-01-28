@@ -10,16 +10,7 @@ bot.on("ready", function() {
 });
        
 bot.on('message', function(message) {
-    
-    if(message.content === 'bonjour') {
-        
-     message.reply('Bonjour, fils.')     
-    }
-    
-});
-
-bot.on('message', message => {
-  if (message.content === "/kick") {
+    if (message.content === "/kick") {
     let modRole = message.guild.roles.find("name", "Moderators");
     if(message.member.roles.has(modRole.id)) { 
       let kickMember = message.guild.member(message.mentions.users.first());
@@ -28,7 +19,9 @@ bot.on('message', message => {
     } else {
       return message.reply("You dont have the perms to kick members. scrub.");
     }
-  }
+        
+    
+    
 });
 
 bot.on('message', async function(message) {
