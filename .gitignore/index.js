@@ -41,27 +41,7 @@ bot.on('message', async function(message) {
         case "snickerz":
            message.reply('Mon créateur...');
             break;
-            
-        case "ongagne":
-    module.exports.run = async (bot, message, args ) => {
-	var yes = Math.floor(Math.random() * (100 - 0)) + 0;
-	var no = 100 - yes;
-	
-	module.exports.run = async (bot, message, args ) => {
-var yes = Math.floor(Math.random() * (100 - 0)) + 0;
-var no = 100 - yes;
-
-if (yes < no) {
-  message.channel.send("non (" + no + "%)" );
-}
-else if (yes > no) {
-  message.channel.send("oui (" + yes + "%)");
-}
-else{
-  message.channel.send("50-50");
-}
-}}
-    
+    }
 });
     
 
