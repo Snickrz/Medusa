@@ -30,15 +30,6 @@ bot.on('message', async function(message) {
            message.reply('Tu sais ce qui est marrant, un catamaran.');
             break;
             
-            
-        default:
-            message.reply("Commande invalide, faites !help.");
-            
-        case "enzo?":
-           message.reply('Ouais me parles pas de lui.');
-            break;
-            
-            
         default:
             message.reply("Commande invalide, faites !help.");
     }
