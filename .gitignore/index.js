@@ -61,7 +61,14 @@ bot.on('message', async function(message) {
             break;
             
         case "join":
-            voiceConnection.channel.join();
+            
+            const voiceChannel = message.member.voiceChannel;
+            if (!voiceChannel){
+            return message.channel.send(":x: You must be in a voice channel first!");
+             }
+            voiceChannel.join()
+            .then(message => message.channel.send("I joined the channel successfully!"));   
+               
             break;
     
     }
