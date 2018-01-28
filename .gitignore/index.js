@@ -11,8 +11,8 @@ bot.on("ready", function() {
 
 bot.on('message', function(message) {
     
-    if(message.content === 'ping') {
-     message.reply('Pong ! ' + bot.ping + ' ms !')  
+    if(message.content === 'bonjour') {
+     message.reply('Bonjour, Fils.')  
     }
     
 });
@@ -26,7 +26,7 @@ bot.on('message', async function(message) {
     
     switch (args[0].toLowerCase()) {
             
-        case "ping":
+        case "bonjour":
            message.reply('Bonjour, Fils.');
             break;
             
