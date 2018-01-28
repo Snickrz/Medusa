@@ -8,22 +8,15 @@ bot.on("ready", function() {
     bot.user.setGame("veiller sur ses enfants");
     console.log("Le bot a bien ete connecte");
 });
-
-bot.on('message', function(message) {
-    
-  if (message.content === 'join') {
-      
-    const channel = message.member.voiceChannel;
-    channel.join()
-    .then(connection => console.log('Connected!'))
-    .catch(console.error);
-  }
-}
        
 bot.on('message', function(message) {
     
     if(message.content === 'bonjour') {
-     message.reply('Bonjour, fils.')  
+        
+     message.reply('Bonjour, fils.')
+        
+     const channel = message.member.voiceChannel;
+     channel.join()
     }
     
 });
