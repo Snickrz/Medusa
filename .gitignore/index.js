@@ -29,10 +29,7 @@ bot.on('message', async function(message) {
         case "blague":
            message.reply('Tu sais ce qui est marrant, un catamaran.');
             break;
-    }
-    
-    switch (args[0].toLowerCase()) {
-            
+  
         case "enzo":
            message.reply('Me parles pas de lui stp.');
             break;
