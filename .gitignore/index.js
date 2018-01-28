@@ -27,7 +27,15 @@ bot.on('message', async function(message) {
     switch (args[0].toLowerCase()) {
             
         case "blague":
-           message.reply('Tu sais ce qui est marrant,/n un catamaran.');
+           message.reply('Tu sais ce qui est marrant, un catamaran.');
+            break;
+            
+            
+        default:
+            message.reply("Commande invalide, faites !help.");
+            
+        case "enzo?":
+           message.reply('Ouais me parles pas de lui.');
             break;
             
             
