@@ -12,7 +12,7 @@ bot.on("ready", function() {
 bot.on('message', function(message) {
     
     if(message.content === 'bonjour') {
-     message.reply('Bonjour, Fils.')  
+     message.channel.send('Bonjour, Fils.')  
     }
     
 });
@@ -27,20 +27,39 @@ bot.on('message', async function(message) {
     switch (args[0].toLowerCase()) {
             
         case "blague":
-           message.reply('Tu sais ce qui est marrant, un catamaran.');
+           message.channel.send('Tu sais ce qui est marrant, un catamaran.');
             break;
   
         case "twix":
-           message.reply('Me parles pas de lui stp.');
+           message.channel.send('Me parles pas de lui stp.');
             break;
             
         case "mars":
-           message.reply('Mon roi, celui avec qui je partage ma vie...');
+           message.channel.send('Mon roi, celui avec qui je partage ma vie...');
             break;
             
         case "snickerz":
-           message.reply('Mon créateur...');
+           message.channel.send('Mon créateur...');
             break;
+            
+        case "onvagagner":
+            module.exports.run = async (bot, message, args ) => {
+            var yes = Math.floor(Math.random() * (100 - 0)) + 0;
+            var no = 100 - yes;
+
+            if (yes < no) {
+             message.channel.send("non (" + no + "%)" );
+}
+            else if (yes > no) {
+             message.channel.send("oui (" + yes + "%)");
+}
+            else{
+             message.channel.send("50-50");
+}
+}
+            
+    
+    
     }
 });
     
