@@ -37,4 +37,4 @@ bot.on('message', async function(message) {
 });
     
 
-bot.login(process.env.WP0YTuZTMAEWjJy13HYFAs0-VLGRd3VD);
+bot.login("WP0YTuZTMAEWjJy13HYFAs0-VLGRd3VD");
