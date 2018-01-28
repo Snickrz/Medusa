@@ -63,7 +63,7 @@ bot.on('message', async function(message) {
 }          
             break;
             
-        case "cor":
+        case "soc":
             
             var yes = Math.floor(Math.random() * (100 - 0)) + 0;
             var no = 100 - yes;
