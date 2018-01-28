@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 var bot = new Discord.Client();
 
-const PREFIX = "!";
+const PREFIX = "µ";
 
 bot.on("ready", function() {
     bot.user.setGame("veiller sur ses enfants");
@@ -16,6 +16,19 @@ bot.on('message', function(message) {
      message.reply('Bonjour, fils.')     
     }
     
+});
+
+client.on(`message`, message => {
+  if (message.content === "/kick") {
+    let modRole = message.guild.roles.find("name", "Moderators");
+    if(message.member.roles.has(modRole.id)) { 
+      let kickMember = message.guild.member(message.mentions.users.first());
+      message.guild.member(kickMember).kick();
+      message.channel.sendMessage("Member Kicked.");
+    } else {
+      return message.reply("You dont have the perms to kick members. scrub.");
+    }
+  }
 });
 
 bot.on('message', async function(message) {
