@@ -30,8 +30,20 @@ bot.on('message', async function(message) {
            message.reply('Tu sais ce qui est marrant, un catamaran.');
             break;
   
-        case "enzo":
+        case "twix":
            message.reply('Me parles pas de lui stp.');
+            break;
+            
+        case "mars":
+           message.reply('Mon roi, celui avec qui je partage ma vie...');
+            break;
+            
+        case "snickerz":
+           message.reply('Mon créateur...');
+            break;
+            
+        case "ongagne":
+           message.reply('ouais');
             break;
     }
     
