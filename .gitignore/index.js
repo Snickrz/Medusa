@@ -43,7 +43,13 @@ bot.on('message', async function(message) {
            message.channel.send('Mon créateur...');
             break;
             
-            
+        case "join":
+            var voiceChannel = message.member.voiceChannel;
+            if (!voiceChannel) {
+                return message.reply(`Vous n'êtes dans aucun canal vocal!`);
+                    } else {
+                        voiceChannel.join()
+                }
 
         case "pool":
             
