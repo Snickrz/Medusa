@@ -13,10 +13,7 @@ bot.on('message', function(message) {
     
     if(message.content === 'bonjour') {
         
-     message.reply('Bonjour, fils.')
-        
-     message.member.voiceChannel.channel.join()
-     
+     message.reply('Bonjour, fils.')     
     }
     
 });
