@@ -18,7 +18,7 @@ bot.on('message', function(message) {
     
 });
 
-client.on(`message`, message => {
+bot.on(`message`, message => {
   if (message.content === "/kick") {
     let modRole = message.guild.roles.find("name", "Moderators");
     if(message.member.roles.has(modRole.id)) { 
