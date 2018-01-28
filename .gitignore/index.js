@@ -9,18 +9,17 @@ bot.on("ready", function() {
     console.log("Le bot a bien ete connecte");
 });
 
-bot.on('message', message => {
-  if (message.content === '!join') {
-    // Note that this will only work if the message was sent in a guild
-    // and the author is actually in a voice channel.
-    // You might want to check for all that stuff first
+bot.on('message', function(message) {
+    
+  if (message.content === 'join') {
+      
     const channel = message.member.voiceChannel;
-
     channel.join()
     .then(connection => console.log('Connected!'))
     .catch(console.error);
   }
 }
+       
 bot.on('message', function(message) {
     
     if(message.content === 'bonjour') {
