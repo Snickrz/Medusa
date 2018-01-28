@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 var bot = new Discord.Client();
 
-const PREFIX = ":";
+const PREFIX = ";";
 
 bot.on("ready", function() {
     bot.user.setGame("veiller sur ses enfants");
