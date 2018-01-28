@@ -44,7 +44,7 @@ bot.on('message', async function(message) {
             
             
 
-            case "onvagagner":
+        case "onvagagner":
             
             var yes = Math.floor(Math.random() * (100 - 0)) + 0;
             var no = 100 - yes;
@@ -57,10 +57,8 @@ bot.on('message', async function(message) {
 }
             else{
              message.channel.send("50-50");
-}
-}
-            
-    
+}          
+            break;
     
     }
 });
