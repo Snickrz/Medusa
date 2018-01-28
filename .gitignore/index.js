@@ -27,12 +27,12 @@ bot.on('message', async function(message) {
     switch (args[0].toLowerCase()) {
             
         case "ping":
-           message.reply('Pong ! ' + bot.ping + ' ms !');
+           message.reply('Bonjour, Fils.');
             break;
             
             
         default:
-            message.reply("Commande invalide, faites !help :D");
+            message.reply("Commande invalide, faites !help.");
     }
 });
     
