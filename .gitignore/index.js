@@ -53,10 +53,10 @@ bot.on('message', async function(message) {
             var no = 100 - yes;
             
             if (yes < no) {
-             message.channel.send("```non (" + no + "%)```" );
+             message.channel.send("```Non à " + no + "%```" );
 }
             else if (yes > no) {
-             message.channel.send("```oui (" + yes + "%)```");
+             message.channel.send("```Oui à " + no + "%```" );
 }
             else{
              message.channel.send("```50-50```");
@@ -69,13 +69,13 @@ bot.on('message', async function(message) {
             var no = 100 - yes;
             
             if (yes < no) {
-             message.channel.send("Simple (" + no + "%)" );
+             message.channel.send("```Simple à " + no + "%```" );
 }
             else if (yes > no) {
-             message.channel.send("Classé (" + yes + "%)");
+             message.channel.send("```Classé à " + yes + "%```");
 }
             else{
-             message.channel.send("Chasse aux Terroristes");
+             message.channel.send("```Chasse aux Terroristes```");
 }          
             break;
     }
