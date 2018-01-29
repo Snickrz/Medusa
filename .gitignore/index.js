@@ -53,13 +53,13 @@ bot.on('message', async function(message) {
             var no = 100 - yes;
             
             if (yes < no) {
-             message.channel.send("non (" + no + "%)" );
+             message.channel.send("```non (" + no + "%)```" );
 }
             else if (yes > no) {
-             message.channel.send("oui (" + yes + "%)");
+             message.channel.send("```oui (" + yes + "%)```");
 }
             else{
-             message.channel.send("50-50");
+             message.channel.send("```50-50```");
 }          
             break;
             
