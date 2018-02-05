@@ -28,7 +28,7 @@ bot.on('message', async function(message) {
     switch (args[0].toLowerCase()) {
           
         case "blague":
-           message.channel.send('Tu sais ce qui est marrant, un catamaran. (et usuellement la geule de Twix...)');
+           message.channel.send('Tu sais ce qui est marrant, un catamaran. (et usuellement la gueule de Twix...)');
             break;
   
         case "twix":
